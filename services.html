@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+         <nav>
+            <div class="logo">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="accounts.html">Accounts</a></li>
+                <li><a href="transaction.html">Transactions</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+      <main class="main-content">
+         <center>
+        <section class="services">
+            <h1>Our Services</h1><br><br>
+            <div class="service">
+    <h2>Credit Services</h2>
+    <p>Add funds to your account using our credit services.</p>
+    <label for="creditAmount">Enter Amount: </label>
+    <input type="text" id="creditAmount" placeholder="Enter the amount">
+    <button onclick="addCredit()">Add Money</button>
+    </div><br><br>
+     <div class="service">
+    <h2>Debit Services</h2>
+    <p>Deduct funds from your account using our debit services.</p>
+    <label for="debitAmount">Enter Amount: </label>
+    <input type="text" id="debitAmount" placeholder="Enter the amount">
+    <button onclick="deductDebit()">Deduct Money</button>
+     </div><br><br>
+           <div class="service">
+    <h2>Transfer Money</h2>
+    <p>Transfer your balance to another account by providing the recipient's mobile number.</p>
+    <label for="transferAmount">Enter Amount: </label>
+    <input type="text" id="transferAmount" placeholder="Enter the amount">
+    <label for="recipientMobile">Recipient Mobile Number: </label>
+    <input type="text" id="recipientMobile" placeholder="Enter recipient's mobile number">
+    <button onclick="performTransaction('transfer')">Transfer Money</button>
+    </div>
+        </section>
+       
+     </center>
+    </main>
+    <footer>
+       <div class="footer-content">
+            <p>&copy; 2023 Bank of Manuguru</p>
+            <div class="social-icons">
+                <a href="https://in.linkedin.com/in/gleamlub"><img src="images/fb.png" alt="Facebook" class="icons"></a>
+                <a href="https://in.linkedin.com/in/gleamlub"><img src="images/twitter.png" alt="Twitter" class="icons"></a>
+                <a href="https://in.linkedin.com/in/gleamlub"><img src="images/link.png" alt="LinkedIn" class="icons"></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+    function addCredit() {
+        const amount = document.getElementById('creditAmount').value;
+
+        if (!isNaN(parseFloat(amount)) && isFinite(amount) && parseFloat(amount) > 0) {
+            alert(`Successfully added $${amount} to your account.`);
+        } else {
+            alert('Please enter a valid amount.');
+        }
+    }
+    function deductDebit() {
+        const amount = document.getElementById('debitAmount').value;
+        
+        if (!isNaN(parseFloat(amount)) && isFinite(amount) && parseFloat(amount) > 0) {
+        	
+            alert(`Successfully deducted $${amount} from your account.`);
+        } else {
+            alert('Please enter a valid amount.');
+        }
+    }
+    function performTransaction(type) {
+    	
+        const amount = document.getElementById('transferAmount').value;
+      
+        const recipientMobile = document.getElementById('recipientMobile').value;
+
+        if (!isNaN(parseFloat(amount)) && isFinite(amount) && parseFloat(amount) > 0) {
+            if (type === 'transfer') {
+                
+                alert(`Successfully transferred $${amount} to ${recipientMobile}.`);
+            } else {
+                alert('Invalid operation type.');
+            }
+        } else {
+            alert('Please enter a valid amount.');
+        }
+    }
+
+</script>
+    
+</body>
+</html>

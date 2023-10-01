@@ -1,0 +1,117 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+	
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px 0;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+main {
+    width: 100%;
+    height : 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+footer {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: sticky;
+    bottom: 0;
+}
+#fs
+{
+	width: 300px;
+	height: 400px;
+}
+.background-image
+{
+	width: 500px;
+}
+.btn-login,
+.btn-signup {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover,
+.btn-signup:hover {
+    background-color: #2980b9;
+}
+#img
+{
+	width: 500px;
+	position: relative;
+	left: 250px;
+	bottom:100px;
+}
+.button1{
+	position: relative;
+	top : 300px;
+	left: -400px;
+	background-color: #3498db;
+	color: white;
+	width: 200px;
+	height: 30px;
+	border-color: white;
+}
+.button2{
+	position: relative;
+	top : 300px;
+	left: 400px;
+	background-color: #3498db;
+	color: white;
+	width: 200px;
+	height: 30px;
+	border-color: white;
+}
+.banklogo
+{
+	width: 120px;
+	height: 70px;
+	position: relative;
+	bottom: 640px;
+}
+.icons
+{
+	width: 50px;
+	height: 50px;
+}
